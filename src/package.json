@@ -1,0 +1,38 @@
+{
+  "name": "tt",
+  "version": "1.0.0",
+  "description": "This theme is...",
+  "author": "",
+  "keywords": [],
+  "license": "ISC",
+  "scripts": {
+    "css-prefix": "npx postcss style.css css/*.css -u autoprefixer -r",
+    "css-pretty": "prettier --write style.css css/*.css",
+    "css-lint": "stylelint style.css css/*.css --fix",
+    "css": "npm run css-prefix && npm run css-pretty && npm run css-lint"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "prettier": {
+    "tabWidth": 4
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "eslint": "^4.18.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "parcel-bundler": "^1.6.1",
+    "postcss-cli": "^5.0.0",
+    "prettier": "^1.10.2",
+    "stylelint": "^8.4.0",
+    "stylelint-config-prettier": "^2.0.0",
+    "stylelint-config-recommended": "^2.0.1",
+    "webpack": "^3.10.0"
+  }
+}
