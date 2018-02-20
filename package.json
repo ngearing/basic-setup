@@ -9,14 +9,38 @@
     "css-prefix": "npx postcss style.css css/*.css -u autoprefixer -r",
     "css-pretty": "prettier --write style.css css/*.css",
     "css-lint": "stylelint style.css css/*.css --fix",
-    "css": "npm run css-prefix && npm run css-pretty && npm run css-lint"
+    "css": "npm run css-prefix && npm run css-pretty && npm run css-lint",
+    "format": "prettier assets/css/* assets/js/* --write"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
   "prettier": {
+    "printWidth": 100,
     "tabWidth": 4
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "prettier"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "stylelint-scss"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "grid": true
+      }
+    }
   },
   "dependencies": {
     "autoprefixer": "^7.2.5",
@@ -31,10 +55,9 @@
     "postcss-cli": "^5.0.0",
     "node-sass": "^4.7.2",
     "prettier": "^1.10.2",
-    "sass-modules-importer": "^1.2.1",
     "stylelint": "^8.4.0",
     "stylelint-config-prettier": "^2.0.0",
     "stylelint-config-recommended": "^2.0.1",
-    "webpack": "^3.10.0"
+    "stylelint-scss": "^2.3.0"
   }
 }
