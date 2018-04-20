@@ -16,15 +16,17 @@
             "NODE_ENV=development webpack --watch --progress --hide-modules --config node_modules/laravel-mix/setup/webpack.config.js",
         "production":
             "NODE_ENV=production webpack --progress --hide-modules --config node_modules/laravel-mix/setup/webpack.config.js",
-        "precommit": "lint-staged"
-    },
-    "lint-staged": {
-        "ignore": ["dist/"],
-        "linters": {
-            "*.{css,scss}": ["prettier --write", "git add"],
-            "*.js": ["prettier --write", "git add"]
-        }
-    },
+            "precommit": "lint-staged",
+            "prepush": "npm run production && git add dist && git commit --amend --no-edit --no-verify"
+        },
+        "lint-staged": {
+            "ignore": ["dist/"],
+            "linters": {
+                "*.php": ["phpcbf --standard=WordPress", "git add"],
+                "*.{css,scss}": ["prettier --write", "git add"],
+                "*.js": ["prettier --write", "git add"]
+            }
+        },
     "babel": {
         "presets": ["env"]
     },
