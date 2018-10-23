@@ -40,4 +40,5 @@ intermediate
 .idea
 cache
 node_modules
+vendor
 dist

@@ -10,6 +10,6 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 
-[*.{py,html,php}]
+[*.{css,scss,py,html,php}]
 indent_size = 4
 indent_style = tab
