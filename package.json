@@ -4,13 +4,15 @@
   "description": "This is my basic setup for a web project.",
   "author": "Nathan",
   "keywords": [],
+  "proxy": "https://www.browsersync.io/#install",
   "repository": {
     "type": "git",
     "url": "ngearing/basic-setup"
   },
   "license": "ISC",
   "scripts": {
-    "start": "npm run dev",
+    "bs": "browser-sync start -c .bs-config.js",
+    "start": "npm-run-all bs dev",
     "lint": "stylelint src/styles/; eslint src/scripts/; 2>/dev/null",
     "prettier": "prettier src/**/* --write",
     "webpack": "NODE_ENV=development webpack --progress --hide-modules --config node_modules/laravel-mix/setup/webpack.config.js",
@@ -100,6 +102,7 @@
     "imagemin-webpack-plugin": "^2.1.1",
     "laravel-mix": "^2.1.11",
     "lint-staged": "^7.0.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.10.2",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
