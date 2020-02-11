@@ -9,7 +9,7 @@
     "type": "git",
     "url": "ngearing/basic-setup"
   },
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "bs": "browser-sync start -c .bs-config.js",
     "start": "npm-run-all bs dev",
