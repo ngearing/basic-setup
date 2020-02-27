@@ -1,3 +1,4 @@
+import "core-js/es"
 ;(function() {
   "use strict"
 
